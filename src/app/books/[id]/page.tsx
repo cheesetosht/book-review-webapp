@@ -34,7 +34,7 @@ export default async function BookDetails({
         </div>
 
         <h3 className="font-semibold text-xl mb-4">Reviews</h3>
-        {bookDetails.reviews.map((review, i) => (
+        {bookDetails?.reviews.map((review: any, i: number) => (
           <div key={i} className="mb-2">
             <p className="font-semibold">⭐️ {review.rating}</p>
             <p>{review.comments}</p>

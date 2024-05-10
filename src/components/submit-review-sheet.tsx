@@ -45,8 +45,8 @@ export default function SubmitReviewSheet({ bookId }: { bookId: number }) {
           }}
         >
           <div className="flex gap-2">
-            {["1", "2", "3", "4", "5"].map((r) => (
-              <div className="flex gap-0.5 select-none">
+            {["1", "2", "3", "4", "5"].map((r, i) => (
+              <div key={i} className="flex gap-0.5 select-none">
                 <input type="radio" id={r} name="rating" value={r} />
                 <label htmlFor={r}>{r}</label>
               </div>

@@ -15,8 +15,8 @@ export default async function Home({
       <SearchInput />
       <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-3 container py-4">
         {books.map((book, i) => (
-          <Link href={`/books/${book.id}`}>
-            <div key={i} className="rounded-lg border border-gray-200 p-2">
+          <Link key={i} href={`/books/${book.id}`}>
+            <div className="rounded-lg border border-gray-200 p-2">
               <img
                 className="rounded-md mb-1 w-full"
                 src="https://source.unsplash.com/random/200x200"

@@ -31,3 +31,5 @@ export type Book = InferSelectModel<typeof books> & {
 };
 
 export type BookReview = InferSelectModel<typeof book_reviews>;
+
+export type BookDetails = Book & { reviews: BookReview[] }[];

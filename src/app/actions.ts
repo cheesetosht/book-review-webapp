@@ -1,7 +1,7 @@
 "use server";
 
 import { db } from "@/db";
-import { Book, BookReview, book_reviews, books } from "@/db/schema";
+import { Book, BookDetails, book_reviews, books } from "@/db/schema";
 import { eq, ilike, or, sql } from "drizzle-orm";
 
 export async function getBookDetails({ id }: { id: number }) {
@@ -18,7 +18,7 @@ export async function getBookDetails({ id }: { id: number }) {
     .leftJoin(book_reviews, eq(book_reviews.bookId, books.id))
     .where(eq(books.id, id))
     .groupBy(books.id)
-    .limit(1)) as unknown as Book & { reviews: BookReview[] }[];
+    .limit(1)) as unknown as BookDetails[];
 
   return bookData?.[0];
 }
