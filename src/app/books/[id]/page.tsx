@@ -3,8 +3,6 @@ import SubmitReviewSheet from "@/components/submit-review-sheet";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
-export const runtime = "edge";
-
 export default async function BookDetails({
   params: { id },
 }: {
