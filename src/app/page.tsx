@@ -2,6 +2,8 @@ import { getBooks } from "./actions";
 import SearchInput from "@/components/search-input";
 import Link from "next/link";
 
+export const runtime = "edge";
+
 export default async function Home({
   searchParams: { search, page },
 }: {
