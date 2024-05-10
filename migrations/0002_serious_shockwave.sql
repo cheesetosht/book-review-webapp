@@ -1,0 +1,1 @@
+ALTER TABLE "book_review" RENAME TO "book_reviews";
